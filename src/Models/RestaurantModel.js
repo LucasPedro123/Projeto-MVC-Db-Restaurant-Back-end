@@ -3,6 +3,7 @@ const config = require('../config/database');
 const {DataTypes} = require('sequelize');
 const Product = require('./ProdutosRestaurantModel');
 
+
 // Definindo Restaurant no codígo de inplementação.
     const Restaurant = config.define('Restaurant' , { 
     id_restaurant: {
@@ -25,4 +26,4 @@ const Product = require('./ProdutosRestaurantModel');
     })
 
 
-module.exports = Restaurant ;
+module.exports = Restaurant;

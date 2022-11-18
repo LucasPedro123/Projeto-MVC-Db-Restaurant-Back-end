@@ -11,5 +11,4 @@ const config = new Sequelize('restaurante', 'root', 'luc4s051525', {
   } catch(error){
     console.log(error)
   }
-
 module.exports = config;

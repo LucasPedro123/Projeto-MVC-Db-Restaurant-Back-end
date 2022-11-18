@@ -2,8 +2,7 @@
 const config = require('../config/database');
 const Restaurant = require('./RestaurantModel')
 const {DataTypes, AssociationError} = require('sequelize');
-const { default: ModelManager } = require('sequelize/types/model-manager');
-require('../Models');
+
 
 const Product = config.define('Produto', {
     id_product: {

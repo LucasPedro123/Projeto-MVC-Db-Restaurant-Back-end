@@ -3,10 +3,6 @@ const config = require('../Config/database');
 const Restaurant = require('../Models/RestaurantModel');
 
 
-
-
-
-
 /* CONTROLLER RESTAURANTE */
 
     const RestaurantController = {

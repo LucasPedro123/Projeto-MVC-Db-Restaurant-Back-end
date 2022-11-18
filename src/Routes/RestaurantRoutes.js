@@ -15,4 +15,4 @@ const RestaurantController = require('../Controllers/RestaurantController');
     //Excluir um restaurante
     Router.delete('/:id' , RestaurantController.Delete);
     
-module.exports = Router
+module.exports = Router;
