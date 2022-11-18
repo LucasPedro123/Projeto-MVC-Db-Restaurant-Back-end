@@ -7,11 +7,9 @@ const config = require('../config/database');
 
 
 /* CONTROLLER PRODUTO */
-const ControllerProduct = 
-
-    //Listar todos os produtos de um Produto
-    async function GetAll (req, res){
-        res.send("Olá! aqui ficaram a lista de Usuarios:")     
+const ControllerProduct = { 
+    //Listar todos os produtos de um restaurante
+    GetAll: async function  (req, res){
        const product = await Product.findAll();
    
         
@@ -20,9 +18,9 @@ const ControllerProduct =
        .status(200)
        .json(product)
     
-    }
-    // Criar um produto de um Produto
-     async function Create(req, res){
+    },
+    // Criar um produto de um restaurante
+    Create: async function (req, res){
         const {nomeDoProduto, DescricaoDoProduto, preco} = req.params;
         const NewProduct = await Usuario.Create({nomeDoProduto, DescricaoDoProduto, preco});
         if(NewProduct){
@@ -34,9 +32,9 @@ const ControllerProduct =
             .status(401)
             .json("Não foi possível cadastrar Usuario.")
         }
-    }
-    //Alterar os dados de um produto de um Produto
-    async function Update(){
+    },
+    //Alterar os dados de um produto de um restaurante
+    Update: async function (){
         const [req, res] = arguments
         const {id} = req.params;
         const product = await Product.findByPk(id);
@@ -53,9 +51,9 @@ const ControllerProduct =
             .status(200)
             .json(productUpdate)
         }
-    }
+    },
     //Excluir um produto de um Produto
-    async function Delete(req, res){
+    Delete: async function (req, res){
         const product = await Product.findByPk(id);
         const {id} = req.params;
         if(product){
@@ -67,6 +65,6 @@ const ControllerProduct =
             .json(null)
         }
     }
+}
 
-
-module.exports = {Delete , Update, Create, GetAll};
+module.exports = ControllerProduct;

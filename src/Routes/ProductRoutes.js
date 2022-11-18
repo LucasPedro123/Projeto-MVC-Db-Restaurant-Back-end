@@ -1,16 +1,17 @@
-const Express = require('express');
-const Router = Express.Router();
-const {Delete , Update, Create, GetAll} = require('../Controllers/ProductController');
+const express = require('express');
+const router = express.Router();
+const ProductController = require('../controllers/ProductController');
 
-/* PRODUTOS*/
+/*PRODUTOS*/
 
-    //Listar todos os restaurantes
-    Router.get('/' , Delete);
-    // Cadastrar um novo restaurante
-    Router.post('/' , Update);
-    //Alterar os dados de um restaurante
-    Router.patch('/:id' , Create);
-    //Excluir um restaurante
-    Router.delete('/:id' , GetAll);
+    //Listar todos os produtos
+    router.get('/product', ProductController.GetAll);
+    // Cadastrar um novo produtos
+    router.get('/product/', ProductController.Create);
+    //Alterar os dados de um produtos
+    router.get('/product/', ProductController.Update);
+    //Excluir um produtos
+    router.get('/product/:id', ProductController.Delete);
 
-module.exports = Router;
+
+module.exports = router;
