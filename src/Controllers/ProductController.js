@@ -11,9 +11,6 @@ const ControllerProduct = {
     //Listar todos os produtos de um restaurante
     GetAll: async function  (req, res){
        const product = await Product.findAll();
-   
-        
-
        res
        .status(200)
        .json(product)

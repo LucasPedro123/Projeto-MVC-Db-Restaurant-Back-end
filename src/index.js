@@ -3,10 +3,10 @@ const Express = require('express');
 /* 2. Foi criado uma instância para o servidor 
 Nota: É possível criar multiplas instâncias para o servidor
 */
-const WebService = new Express();
+const WebService = Express();
 
 //Rotas:
-const Routers = require('./src/Routes/router');
+const Routers = require('./Routes/router');
 WebService.use('/restaurante', Routers);
 
 
