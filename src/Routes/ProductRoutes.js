@@ -13,5 +13,4 @@ const ProductController = require('../controllers/ProductController');
     //Excluir um produtos
     router.get('/product/:id', ProductController.Delete);
 
-
 module.exports = router;
