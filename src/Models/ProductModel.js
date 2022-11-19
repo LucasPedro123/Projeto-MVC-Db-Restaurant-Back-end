@@ -19,5 +19,11 @@ const Product = config.define('Produto', {
 });
 
 
+Product.associate = (model)=>{ 
+    Product.belongsTo( model.Restaurant, {
+        foreignKey: 'id_restaurant',
+        as: 'Restaurant',
+    })
+}
 
 module.exports = Product;

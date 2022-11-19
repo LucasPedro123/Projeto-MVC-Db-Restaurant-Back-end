@@ -18,7 +18,16 @@ const Product = require('./ProductModel');
           timestamps: false,
         })
     
-
-
+        Restaurant.hasMany(Product, {
+          foreignKey: 'id_restaurant',
+          as: 'Product',
+      })
+      
+      Restaurant.associate = (model)=>{ 
+        Restaurant.hasMany( model.Product, {
+        foreignKey: 'id_restaurant',
+        as: 'Restaurant',
+        })
+      }
 
 module.exports = Restaurant;
