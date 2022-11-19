@@ -1,6 +1,6 @@
 // Configurações adicionais
 const config = require('../config/database');
-const Restaurant = require('./RestaurantModel')
+const Restaurant = require('./RestaurantModel');
 const {DataTypes, AssociationError} = require('sequelize');
 
 
@@ -18,11 +18,6 @@ const Product = config.define('Produto', {
     timestamps: false,
 });
 
-
-    Product.belongsTo( Restaurant, {
-        foreignKey: 'id_restaurant',
-        as: 'Restaurant',
-    })
 
 
 module.exports = Product;

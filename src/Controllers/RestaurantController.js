@@ -8,7 +8,6 @@ const Restaurant = require('../Models/RestaurantModel');
     const RestaurantController = {
         //Listar todos os restaurantes
         GetAll: async function(req, res){
-        res.send("Olá! aqui ficaram a lista de Usuarios:")     
         const restaurant = await Restaurant.findAll();
    
         res

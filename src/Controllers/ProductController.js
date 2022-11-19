@@ -1,5 +1,5 @@
 //Configurações adicionais.
-const Product = require('../Models/ProdutosRestaurantModel');
+const Product = require('../Models/ProductModel');
 const config = require('../config/database');
 
 
