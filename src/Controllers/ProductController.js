@@ -4,6 +4,7 @@ const config = require('../config/database');
 
 
 /* CONTROLLER PRODUTO */
+
     const ControllerProduct = { 
         //Listar todos os produtos de um restaurante
         GetAll: async function  (req, res){
@@ -16,7 +17,7 @@ const config = require('../config/database');
         // Criar um produto de um restaurante
         Create: async function (req, res){
             const {nomeDoProduto, DescricaoDoProduto, preco} = req.params;
-            const NewProduct = await Product.Create({nomeDoProduto, DescricaoDoProduto, preco});
+            const NewProduct = await Product.create({nomeDoProduto, DescricaoDoProduto, preco});
             if(NewProduct){
                 res
                 .status(201)

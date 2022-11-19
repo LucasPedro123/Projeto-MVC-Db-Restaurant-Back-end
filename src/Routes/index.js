@@ -5,7 +5,7 @@ const RouterRestaurant = require('./RestaurantRoutes');
 const RouterProduct = require('./ProductRoutes');
 
 //Rotas:
-Router.use('/' , RouterRestaurant);
-Router.use('/product' , RouterProduct);
+Router.use('/restaurante' , RouterRestaurant);
+Router.use('/produtos' , RouterProduct);
 
 module.exports = Router;

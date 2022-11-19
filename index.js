@@ -7,7 +7,7 @@ const WebService = new Express();
 WebService.use(Express.json())
 //Rotas:
 const Routers = require('./src/Routes/index');
-WebService.use('/restaurante/', Routers);
+WebService.use('/', Routers);
 
 
 

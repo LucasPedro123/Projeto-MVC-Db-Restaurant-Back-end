@@ -7,10 +7,10 @@ const ProductController = require('../controllers/ProductController');
     //Listar todos os produtos
     router.get('/', ProductController.GetAll);
     // Cadastrar um novo produtos
-    router.get('/', ProductController.Create);
+    router.post('/', ProductController.Create);
     //Alterar os dados de um produtos
-    router.get('/', ProductController.Update);
+    router.patch('/:id', ProductController.Update);
     //Excluir um produtos
-    router.get('/:id', ProductController.Delete);
+    router.delete('/:id', ProductController.Delete);
 
 module.exports = router;
